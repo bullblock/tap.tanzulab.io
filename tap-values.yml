@@ -32,13 +32,12 @@ tap_gui:
     catalog:
       locations:
         - type: url
-          target: https://raw.githubusercontent.com/bullblock/tap.wdc.lab/master/catalog-info.yaml
+          target: https://raw.githubusercontent.com/bullblock/tap.tanzulab.io/main/catalog-info.yaml
     backend:
-      baseUrl: http://tap-gui.tap.poclab.me
+      baseUrl: http://tap-gui.tap.tanzulab.io
       cors:
-        origin: http://tap-gui.tap.poclab.me
-    supplyChain:
-      enablePlugin: true
+        origin: http://tap-gui.tap.tanzulab.io
+
 metadata_store:
   app_service_type: NodePort # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
 
@@ -51,6 +50,8 @@ accelerator:
     service_type: "ClusterIP"
 
 contour:
+  infrastructure_provider: aws
   envoy:
     service:
-      type: LoadBalancer
+      aws:
+        LBType: nlb
