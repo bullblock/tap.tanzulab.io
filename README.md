@@ -1,2 +1,1 @@
-# tap.tanzulab.io
-tap.tanzulab.io
+Sample org structure for application catalog
