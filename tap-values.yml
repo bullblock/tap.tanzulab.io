@@ -10,7 +10,7 @@ buildservice:
 supply_chain: basic
 
 cnrs:
-  domain_name: "tap.tanzulab.io"
+  domain_name: "tap-on-eks.tanzulab.io"
 
 ootb_supply_chain_basic:
   registry:
@@ -20,25 +20,25 @@ ootb_supply_chain_basic:
     ssh_secret: ""
 
 learningcenter:
-  ingressDomain: "learningcenter.tap.tanzulab.io"
+  ingressDomain: "learningcenter.tap-on-eks.tanzulab.io"
   ingressClass: contour
 
 
 tap_gui:
   service_type: ClusterIP
   ingressEnabled: "true"
-  ingressDomain: "tap.tanzulab.io"
+  ingressDomain: "tap-on-eks.tanzulab.io"
   app_config:
     app:
-      baseUrl: http://tap-gui.tap.tanzulab.io
+      baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
     catalog:
       locations:
         - type: url
           target: https://raw.githubusercontent.com/bullblock/tap.tanzulab.io/main/catalog-info.yaml
     backend:
-      baseUrl: http://tap-gui.tap.tanzulab.io
+      baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
       cors:
-        origin: http://tap-gui.tap.tanzulab.io
+        origin: http://tap-gui.tap-on-eks.tanzulab.io
 
 metadata_store:
   app_service_type: NodePort # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
