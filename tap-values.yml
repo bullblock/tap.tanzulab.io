@@ -3,7 +3,7 @@ profile: full
 shared:
   ingress_domain: tap-on-eks.tanzulab.io
 
-ceip_policy_disclosed: TRUE # The value must be true for installation to succeed
+ceip_policy_disclosed: TRUE
 buildservice:
   kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
   kp_default_repository_username: "xinstevenl@vmware.com"
@@ -47,10 +47,10 @@ tap_gui:
 
 metadata_store:
   ns_for_export_app_cert: "default"
-  app_service_type: ClusterIP # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
+  app_service_type: ClusterIP
 
 grype:
-  namespace: "default" # (optional) Defaults to default namespace.
+  namespace: "default"
   targetImagePullSecret: "tap-registry"
 
 accelerator:
