@@ -48,7 +48,6 @@ metadata_store:
   app_service_type: NodePort
 
 grype:
-  namespace: "default"
   targetImagePullSecret: "tap-registry"
 
 accelerator:
