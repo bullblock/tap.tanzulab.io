@@ -1,8 +1,4 @@
 profile: full
-
-shared:
-  ingress_domain: tap-on-eks.tanzulab.io
-
 ceip_policy_disclosed: TRUE
 buildservice:
   kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
@@ -11,8 +7,10 @@ buildservice:
   tanzunet_username: "xinstevenl@vmware.com"
   tanzunet_password: "#Dr34mJ0b#"
   descriptor_name: "full"
-
 supply_chain: basic
+
+cnrs:
+  domain_name: tap-on-eks.tanzulab.io
 
 ootb_supply_chain_basic:
   registry:
@@ -21,8 +19,13 @@ ootb_supply_chain_basic:
   gitops:
     ssh_secret: ""
 
+learningcenter:
+  ingressDomain: "tap-on-eks.tanzulab.io"
+
 tap_gui:
   service_type: ClusterIP
+  ingressEnabled: "true"
+  ingressDomain: "tap-on-eks.tanzulab.io"
   app_config:
     app:
       baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
@@ -36,9 +39,8 @@ tap_gui:
         origin: http://tap-gui.tap-on-eks.tanzulab.io
 
 metadata_store:
-  ns_for_export_app_cert: "default"
-  app_service_type: ClusterIP
+  app_service_type: LoadBalancer
 
 grype:
-  namespace: "default" 
+  namespace: "default"
   targetImagePullSecret: "tap-registry"
