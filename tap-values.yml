@@ -1,12 +1,17 @@
 profile: full
+
+shared:
+  ingress_domain: "tap-on-eks.tanzulab.io"
+
 ceip_policy_disclosed: TRUE # The value must be true for installation to succeed
 buildservice:
   kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
-  kp_default_repository_username: ""
-  kp_default_repository_password: ''
-  tanzunet_username: ""
-  tanzunet_password: ''
+  kp_default_repository_username: "xinstevenl@vmware.com"
+  kp_default_repository_password: '#Dr34mJ0b#'
+  tanzunet_username: "xinstevenl@vmware.com"
+  tanzunet_password: '#Dr34mJ0b#'
   descriptor_name: "full"
+
 supply_chain: basic
 
 cnrs:
@@ -41,6 +46,7 @@ tap_gui:
         origin: http://tap-gui.tap-on-eks.tanzulab.io
 
 metadata_store:
+  ns_for_export_app_cert: "default"
   app_service_type: NodePort # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
 
 grype:
