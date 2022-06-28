@@ -35,9 +35,9 @@ tap_gui:
         origin: http://tap-gui.tap-on-eks.tanzulab.io
 
 metadata_store:
-  ns_for_export_app_cert: "tap-install"
+  ns_for_export_app_cert: "default"
   app_service_type: NodePort
 
 grype:
-  namespace: "default"
+  namespace: "tap-install"
   targetImagePullSecret: "tap-registry"
