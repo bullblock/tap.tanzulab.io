@@ -5,9 +5,9 @@ shared:
 
 ceip_policy_disclosed: TRUE
 buildservice:
-  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
-  kp_default_repository_username: "xinstevenl@vmware.com"
-  kp_default_repository_password: "#Dr34mJ0b#"
+  kp_default_repository: "index.docker.io/powellcrack/build-service"
+  kp_default_repository_username: "powellcrack"
+  kp_default_repository_password: "Qh#!3#ocuYDlq0th"
   tanzunet_username: "xinstevenl@vmware.com"
   tanzunet_password: "#Dr34mJ0b#"
   descriptor_name: "full"
@@ -19,10 +19,10 @@ cnrs:
 
 ootb_supply_chain_basic:
   registry:
-    server: "dev.registry.tanzu.vmware.com"
-    repository: "sliang/supply-chain"
+    server: "index.docker.io"
+    repository: "powellcrack/supply-chain"
   gitops:
-    ssh_secret: ""
+    ssh_secret: "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"
 
 learningcenter:
   ingressDomain: learningcenter.tap-on-eks.tanzulab.io
