@@ -13,6 +13,9 @@ buildservice:
 
 supply_chain: basic
 
+cnrs:
+  domain_name: "tap-on-eks.tanzulab.io"
+
 ootb_supply_chain_basic:
   registry:
     server: "dev.registry.tanzu.vmware.com"
@@ -20,8 +23,14 @@ ootb_supply_chain_basic:
   gitops:
     ssh_secret: ""
 
+learningcenter:
+  ingressDomain: "learningcenter.tap-on-eks.tanzulab.io"
+  ingressClass: contour
+
 tap_gui:
   service_type: ClusterIP
+  ingressEnabled: "true"
+  ingressDomain: "tap-on-eks.tanzulab.io"
   app_config:
     app:
       baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
@@ -36,7 +45,19 @@ tap_gui:
 
 metadata_store:
   ns_for_export_app_cert: "default"
-  app_service_type: ClusterIP
+  app_service_type: NodePort
 
 grype:
+  namespace: "default"
   targetImagePullSecret: "tap-registry"
+
+accelerator:
+  server:
+    service_type: "ClusterIP"
+
+contour:
+  infrastructure_provider: aws
+  envoy:
+    service:
+      aws:
+        LBType: nlb
