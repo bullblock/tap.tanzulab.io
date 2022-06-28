@@ -6,7 +6,6 @@ buildservice:
   kp_default_repository_password: "#Dr34mJ0b#"
   tanzunet_username: "xinstevenl@vmware.com"
   tanzunet_password: "#Dr34mJ0b#"
-  descriptor_name: "full"
 
 supply_chain: basic
 
