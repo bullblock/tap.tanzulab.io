@@ -1,21 +1,21 @@
 profile: full
 
 shared:
-  ingress_domain: "tap-on-eks.tanzulab.io"
+  ingress_domain: tap-on-eks.tanzulab.io
 
 ceip_policy_disclosed: TRUE # The value must be true for installation to succeed
 buildservice:
-  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
-  kp_default_repository_username: "xinstevenl@vmware.com"
-  kp_default_repository_password: "\#Dr34mJ0b\#"
-  tanzunet_username: "xinstevenl@vmware.com"
-  tanzunet_password: "\#Dr34mJ0b\#"
+  kp_default_repository: dev.registry.tanzu.vmware.com/sliang/build-service
+  kp_default_repository_username: xinstevenl@vmware.com
+  kp_default_repository_password: #Dr34mJ0b#
+  tanzunet_username: xinstevenl@vmware.com
+  tanzunet_password: #Dr34mJ0b#
   descriptor_name: "full"
 
 supply_chain: basic
 
 cnrs:
-  domain_name: "tap-on-eks.tanzulab.io"
+  domain_name: tap-on-eks.tanzulab.io
 
 ootb_supply_chain_basic:
   registry:
@@ -25,14 +25,14 @@ ootb_supply_chain_basic:
     ssh_secret: ""
 
 learningcenter:
-  ingressDomain: "learningcenter.tap-on-eks.tanzulab.io"
+  ingressDomain: learningcenter.tap-on-eks.tanzulab.io
   ingressClass: contour
 
 
 tap_gui:
   service_type: ClusterIP
   ingressEnabled: "true"
-  ingressDomain: "tap-on-eks.tanzulab.io"
+  ingressDomain: tap-on-eks.tanzulab.io
   app_config:
     app:
       baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
