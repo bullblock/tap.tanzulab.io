@@ -5,34 +5,24 @@ shared:
 
 ceip_policy_disclosed: TRUE
 buildservice:
-  kp_default_repository: "index.docker.io/powellcrack/build-service"
-  kp_default_repository_username: "powellcrack"
-  kp_default_repository_password: "Qh#!3#ocuYDlq0th"
+  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
+  kp_default_repository_username: "xinstevenl@vmware.com"
+  kp_default_repository_password: "#Dr34mJ0b#"
   tanzunet_username: "xinstevenl@vmware.com"
   tanzunet_password: "#Dr34mJ0b#"
   descriptor_name: "full"
 
 supply_chain: basic
 
-cnrs:
-  domain_name: tap-on-eks.tanzulab.io
-
 ootb_supply_chain_basic:
   registry:
-    server: "index.docker.io"
-    repository: "powellcrack/supply-chain"
+    server: "dev.registry.tanzu.vmware.com"
+    repository: "sliang/supply-chain"
   gitops:
-    ssh_secret: "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"
-
-learningcenter:
-  ingressDomain: learningcenter.tap-on-eks.tanzulab.io
-  ingressClass: contour
-
+    ssh_secret: ""
 
 tap_gui:
   service_type: ClusterIP
-  ingressEnabled: "true"
-  ingressDomain: tap-on-eks.tanzulab.io
   app_config:
     app:
       baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
@@ -50,16 +40,5 @@ metadata_store:
   app_service_type: ClusterIP
 
 grype:
-  namespace: "default"
+  namespace: "default" 
   targetImagePullSecret: "tap-registry"
-
-accelerator:
-  server:
-    service_type: "ClusterIP"
-
-contour:
-  infrastructure_provider: aws
-  envoy:
-    service:
-      aws:
-        LBType: nlb
