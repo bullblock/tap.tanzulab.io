@@ -31,8 +31,8 @@ learningcenter:
 
 tap_gui:
   service_type: ClusterIP
- ingressEnabled: "true"
- ingressDomain: tap-on-eks.tanzulab.io
+  ingressEnabled: "true"
+  ingressDomain: tap-on-eks.tanzulab.io
   app_config:
     app:
       baseUrl: http://tap-gui.tap-on-eks.tanzulab.io
