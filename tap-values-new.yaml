@@ -41,10 +41,10 @@ tap_gui:
         origin: http://tap-gui.tap-on-eks.tanzulab.io
 
 metadata_store:
-  app_service_type: NodePort # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
+  app_service_type: NodePort
 
 grype:
-  namespace: "default" # (optional) Defaults to default namespace.
+  namespace: "default"
   targetImagePullSecret: "tap-registry"
 
 accelerator:
