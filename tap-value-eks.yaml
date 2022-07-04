@@ -1,11 +1,11 @@
 profile: full
 ceip_policy_disclosed: TRUE
 buildservice:
-  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang/build-service"
-  kp_default_repository_username: ""
-  kp_default_repository_password: ""
-  tanzunet_username: ""
-  tanzunet_password: ""
+  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang-tap/build-service"
+  kp_default_repository_username: "xinstevenl@vmware.com"
+  kp_default_repository_password: "#Dr34mJ0b#"
+  tanzunet_username: "xinstevenl@vmware.com"
+  tanzunet_password: "#Dr34mJ0b#"
 
 supply_chain: basic
 
@@ -15,7 +15,7 @@ cnrs:
 ootb_supply_chain_basic:
   registry:
     server: "dev.registry.tanzu.vmware.com"
-    repository: "sliang/supply-chain"
+    repository: "sliang-tap/supply-chain"
   gitops:
     ssh_secret: ""
 
