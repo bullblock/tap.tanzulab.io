@@ -54,5 +54,4 @@ accelerator:
 contour:
   envoy:
     service:
-      aws:
-        LBType: LoadBalancer
+      type: LoadBalancer
