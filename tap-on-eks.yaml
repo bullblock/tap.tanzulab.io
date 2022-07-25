@@ -1,11 +1,15 @@
 profile: full
+
+shared:
+  ingress_domain: tap.tanzulab.io
+
 ceip_policy_disclosed: TRUE
 buildservice:
   kp_default_repository: "dev.registry.tanzu.vmware.com/sliang-tap/build-service"
-  kp_default_repository_username: ""
-  kp_default_repository_password: ""
-  tanzunet_username: ""
-  tanzunet_password: ""
+  kp_default_repository_username: "xinstevenl@vmware.com"
+  kp_default_repository_password: "#Dr34mJ0b#"
+  tanzunet_username: "xinstevenl@vmware.com"
+  tanzunet_password: "#Dr34mJ0b#"
 
 supply_chain: basic
 
