@@ -1,2 +1,1 @@
-# tap.tanzulab.io
-Tanzu Application Platform repo
+Sample org structure for application catalog
