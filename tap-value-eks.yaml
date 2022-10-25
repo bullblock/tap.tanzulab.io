@@ -9,7 +9,6 @@ buildservice:
   kp_default_repository: "dev.registry.tanzu.vmware.com/sliang-tap/v122/build-service"
   kp_default_repository_username: "xinstevenl@vmware.com"
   kp_default_repository_password: "$Dr34mJ0b$"
-  exclude_dependencies: true
 
 supply_chain: basic
 
