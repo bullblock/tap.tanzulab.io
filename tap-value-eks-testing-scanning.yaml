@@ -1,0 +1,65 @@
+profile: full
+
+shared:
+  ingress_domain: tap.tanzulab.io
+
+ceip_policy_disclosed: TRUE
+
+buildservice:
+  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang-tap/v122/build-service"
+  kp_default_repository_username: "xinstevenl@vmware.com"
+  kp_default_repository_password: "$Dr34mJ0b$"
+
+supply_chain: testing_scanning 
+
+cnrs:
+  provider: local
+
+accelerator:
+  server:
+    service_type: "ClusterIP"
+
+ootb_supply_chain_testing_scanning:
+  registry:
+    server: "dev.registry.tanzu.vmware.com"
+    repository: "sliang-tap/v122/supply-chain"
+  gitops:
+    ssh_secret: ""
+
+tap_gui:
+  service_type: ClusterIP
+  app_config:
+    app:
+      baseUrl: http://tap-gui.tap.tanzulab.io
+    catalog:
+      locations:
+        - type: url
+          target: https://raw.githubusercontent.com/bullblock/tap.tanzulab.io/main/catalog-info.yaml
+    backend:
+      baseUrl: http://tap-gui.tap.tanzulab.io
+      cors:
+        origin: http://tap-gui.tap.tanzulab.io
+
+metadata_store:
+  ns_for_export_app_cert: "default"
+  app_service_type: ClusterIP
+
+scanning:
+  metadataStore:
+    url: ""
+
+grype:
+  namespace: "default"
+  targetImagePullSecret: "tap-registry"
+  metadataStore:
+    url: ""
+    caSecret:
+      name: ""
+      importFromNamespace: ""
+
+contour:
+  infrastructure_provider: aws
+  envoy:
+    service:
+      aws:
+        LBType: nlb
