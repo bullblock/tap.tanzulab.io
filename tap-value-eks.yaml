@@ -6,9 +6,9 @@ shared:
 ceip_policy_disclosed: TRUE
 
 buildservice:
-  kp_default_repository: "dev.registry.tanzu.vmware.com/sliang-tap/v122/build-service"
-  kp_default_repository_username: "xinstevenl@vmware.com"
-  kp_default_repository_password: "$Dr34mJ0b$"
+  kp_default_repository: ""
+  kp_default_repository_username: ""
+  kp_default_repository_password: ""
 
 supply_chain: basic
 
@@ -21,8 +21,8 @@ accelerator:
 
 ootb_supply_chain_basic:
   registry:
-    server: "dev.registry.tanzu.vmware.com"
-    repository: "sliang-tap/v122/supply-chain"
+    server: ""
+    repository: ""
   gitops:
     ssh_secret: ""
 
